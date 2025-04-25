@@ -1,0 +1,51 @@
+# AMBF Version: (0.1)
+bodies: [BODY volume_reference]
+joints: []
+volumes: [VOLUME mastoidectomy_volume_low]
+high resolution path: ./meshes/high_res/
+low resolution path: ./meshes/low_res/
+ignore inter-collision: true
+namespace: /ambf/env/
+
+BODY volume_reference:
+  name: volume_reference
+  #mesh: drillMesh.obj
+  mesh: ""
+  mass: 0.0
+  scale: 10.0 # this is probably not the right scale now, need to double check?
+  location:
+    position:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    orientation:
+      r: 0.0
+      p: 0.0
+      y: 0.0
+  passive: false
+
+VOLUME mastoidectomy_volume_low:
+  name: mastoidectomy_volume_low
+  parent: volume_reference
+  location:
+    position: {x: -6.040592783505154, y: 0.0, z: 0.0}  # placed 745mm away from camera given 1AU = 0.049664m
+    # orientation: {r: -1.57079, p: 0.0, y: 0}
+    # orientation: {r: 1.57079, p: 1.8, y: 3.14}
+    # position: {x: -0.010821872583012664 , y: 0.002329320569873989, z: 0.05103594187928553}
+    orientation: {r: 0.0, p: 0.0, y: 0.0}
+
+  scale: 1.0
+  dimensions: {x: 1.0, y: 1.0, z: 0.5}
+  images:
+    path: ../resources/volumes/Experiments/UncertainTumor_Resized/volume
+    prefix: plane000
+    format: png
+    count: 374
+  shaders:
+    path: ./shaders/volume/
+    vertex: shader.vs
+    fragment: shader.fs
+    
+    
+
+        

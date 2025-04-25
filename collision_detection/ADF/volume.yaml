@@ -1,0 +1,43 @@
+# AMBF Version: (0.1)
+bodies: [BODY volume_reference]
+joints: []
+volumes: [VOLUME mastoidectomy_volume_low]
+high resolution path: ./meshes/high_res/
+low resolution path: ./meshes/low_res/
+ignore inter-collision: true
+namespace: /ambf/env/
+
+BODY volume_reference:
+  name: volume_reference
+  #mesh: drillMesh.obj
+  mesh: ""
+  mass: 0.0
+  scale: 10.0 # this is probably not the right scale now, need to double check?
+  location:
+    position:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    orientation:
+      r: 0.0
+      p: 0.0
+      y: 0.0
+  passive: false
+
+VOLUME mastoidectomy_volume_low:
+  name: mastoidectomy_volume_low
+  parent: volume_reference
+  location:
+    position: {x: 0.13151802505954502 , y: 0.021874018479401788, z: -0.5162774030331695}
+    orientation: {r: 0.0, p: 0.0, y: 0.0}
+  scale: 10.0
+  dimensions: {x: 0.03625077011759886, y: 0.017533052213740626, z: 0.04051556660202226}
+  images:
+    path: /home/lauraconnolly/vf_deepdive/AMBF_volumes/volume/
+    prefix: slice
+    format: png
+    count: 342
+
+    
+
+        

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>vf_helper_module</class>
+ <widget class="qMRMLWidget" name="vf_helper_module">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>279</width>
+    <height>489</height>
+   </rect>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QPushButton" name="setUpOpenIGTLinkNodeButton">
+     <property name="text">
+      <string>Activate OpenIGTLink</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string>Publish Slicer data:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="publishNeedleTipTransform">
+     <property name="text">
+      <string>Publish NeedleTipToNeedle</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="publishCauteryTipTransform">
+     <property name="text">
+      <string>Publish CauteryTipToCautery</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>AMBF Volume Output Path:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="pathLineEdit">
+     <property name="text">
+      <string>/home/lauraconnolly/vf_deepdive/AMBF_volumes/</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="updateAMBFVolumeButton">
+     <property name="text">
+      <string>Update AMBF volume</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="updateBreastPluginFile">
+     <property name="text">
+      <string>Update breast plugin file</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="resizeVolumeButton">
+     <property name="text">
+      <string>Resize volume (50%)</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="title">
+      <string>Data saving</string>
+     </property>
+     <layout class="QFormLayout" name="formLayout">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string>Particpant number:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="participantNumberLineEdit"/>
+      </item>
+      <item row="1" column="0" colspan="2">
+       <widget class="QPushButton" name="recordUSButton">
+        <property name="text">
+         <string>Record ultrasound button</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0" colspan="2">
+       <widget class="QPushButton" name="saveUltrasoundButton">
+        <property name="text">
+         <string>Save ultrasound sequence</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0" colspan="2">
+       <widget class="QPushButton" name="recordTrackingButton">
+        <property name="text">
+         <string>Record tracking scene</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0" colspan="2">
+       <widget class="QPushButton" name="saveTrackingButton">
+        <property name="text">
+         <string>Save tracking sequence</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="0" colspan="2">
+       <widget class="QPushButton" name="resetSequencesButton">
+        <property name="text">
+         <string>Reset sequences</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>qMRMLWidget</class>
+   <extends>QWidget</extends>
+   <header>qMRMLWidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
