@@ -19,6 +19,8 @@ element of the system. This system was developed and tested on Ubuntu 20.04 usin
 
 ## Part 1 - Collision detection and haptic feedback in AMBF
 
+![Robot Simulation](collision_detection.jpg)
+
 The AMBF plugin for this work was derived from the volumetric drilling simulator here: https://github.com/LCSR-SICKKIDS/volumetric_drilling
 The code in this example was modified to support breast conserving surgery. The main modifications made were to 
 volumetric_drilling.cpp, drill_manager.cpp, and the ADF file that loads the volume into the file. These changes were made to ensure
@@ -29,6 +31,8 @@ This code can be found in the "collision_detection" folder and was compiled agai
 The compilation instructions still match the original volumetric_drilling example.
 
 ## Part 2 - Setup from 3D Slicer
+
+![Robot Simulation](slicer_helper_module.jpg)
 
 The helper module in Slicer is used to publish the Pivot calibrations automatically and to convert the tumor volume that is constructed from
 ultrasound to png slices that can be loaded into AMBF. It is dependent on SlicerROS2 (https://github.com/rosmed/slicer_ros2_module), AMBF utils (https://github.com/LCSR-CIIS/ambf_util_slicer_plugin)
